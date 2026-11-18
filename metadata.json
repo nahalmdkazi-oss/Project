@@ -1,0 +1,6 @@
+{
+  "name": "Automatic Forward-Reverse Motor Starter Simulator",
+  "description": "Interactive Bengali industrial control panel simulator with CHNT MCB, dual ANLY timers, dual magnetic contactors, 8-pin control relay, and live animated wiring trace.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

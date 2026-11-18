@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background-color: #0b1120;
+    color: #f1f5f9;
+  }
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Live animated current flow on energized SVG wires */
+.wire-active {
+  stroke-dasharray: 8 6;
+  animation: currentFlow 0.65s linear infinite;
+  filter: drop-shadow(0 0 4px currentColor);
+}
+
+@keyframes currentFlow {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
+/* Motor Rotor Animations */
+@keyframes spinCW {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCCW {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.motor-cw {
+  animation: spinCW 1.1s linear infinite;
+}
+
+.motor-ccw {
+  animation: spinCCW 1.1s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wire-active {
+    animation: none;
+    stroke-dasharray: none;
+  }
+  .motor-cw,
+  .motor-ccw {
+    animation-duration: 6s;
+  }
+}
+
+/* Custom Scrollbar for horizontal SVG scrolling on narrow screens */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
